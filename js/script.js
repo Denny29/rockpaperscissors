@@ -8,4 +8,13 @@
 
 
 // DOCUMENT READY FUNCTION BELOW
+$(document).ready(function() {
+    alert("hi");
 
+    $("button").click(function(){
+    let input = ("#input").val();
+    //$("#userChoice").html(input);
+    alert("does this work");
+});
+
+});
