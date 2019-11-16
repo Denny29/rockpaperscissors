@@ -9,7 +9,7 @@
 
 // DOCUMENT READY FUNCTION BELOW
 $(document).ready(function() {
-    alert("hi");
+    
 
     $("button").click(function(){
         let input = $("#input").val();
@@ -21,6 +21,10 @@ $(document).ready(function() {
         else if(choice > 1/3 && choice < 2/3){
                 $("#computerChoice").html("scissors");
         
+        }
+
+        else if(choice > 2/3 && choice < 1){
+            $("computerChoice").html("rock");
         }
     });
 
