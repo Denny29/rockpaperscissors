@@ -23,8 +23,8 @@ $(document).ready(function() {
         
         }
 
-        else if(choice > 2/3 && choice < 1){
-            $("computerChoice").html("rock");
+        else if(choice > 2/3){
+            $("#computerChoice").html("rock");
         }
     });
 
