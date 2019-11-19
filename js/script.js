@@ -12,19 +12,25 @@ $(document).ready(function() {
     
 
     $("button").click(function(){
-        let input = $("#input").val();
-        $("#userChoice").html(input);
-        let choice = Math.random();
-        if(choice <1/3){
+        let userChoice = $("#input").val();
+        $("#userChoice").html(userChoice);
+        let computerChoice = Math.random();
+        let comChoice = ("");
+        if(computerChoice <1/3){
             $("#computerChoice").html("paper");
+            comChoice = ("paper");
         }
-        else if(choice > 1/3 && choice < 2/3){
+        else if(computerChoice > 1/3 && computerChoice < 2/3){
                 $("#computerChoice").html("scissors");
-        
+                comChoice = ("scissors");
         }
-
-        else if(choice > 2/3){
+        else if(computerChoice > 2/3){
             $("#computerChoice").html("rock");
+            comChoice = ("rock");
+            
+        }
+        else if(userChoice = comChoice){
+            $("#result").html("Draw");
         }
     });
 
