@@ -13,23 +13,26 @@ $(document).ready(function() {
 
     $("button").click(function(){
         let userChoice = $("#input").val();
+        userChoice.toLowerCase();
         $("#userChoice").html(userChoice);
         let computerChoice = Math.random();
-        let comChoice = ("");
+        let comChoice = "";
         if(computerChoice <1/3){
-            $("#computerChoice").html("paper");
             comChoice = ("paper");
+            $("#computerChoice").html(comChoice);
+            console.log(comChoice);
         }
         else if(computerChoice > 1/3 && computerChoice < 2/3){
-                $("#computerChoice").html("scissors");
-                comChoice = ("scissors");
+            comChoice = ("scissors");
+            $("#computerChoice").html(comChoice);
+            console.log(comChoice);
         }
         else if(computerChoice > 2/3){
-            $("#computerChoice").html("rock");
             comChoice = ("rock");
-            
+            $("#computerChoice").html(comChoice);
+            console.log(comChoice);
         }
-        else if(userChoice = comChoice){
+        else if(userChoice == comChoice){
             $("#result").html("Draw");
         }
     });
