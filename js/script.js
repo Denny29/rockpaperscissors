@@ -16,24 +16,44 @@ $(document).ready(function() {
         userChoice.toLowerCase();
         $("#userChoice").html(userChoice);
         let computerChoice = Math.random();
-        let comChoice = "";
+        
         if(computerChoice <1/3){
-            comChoice = ("paper");
-            $("#computerChoice").html(comChoice);
-            console.log(comChoice);
+            $("#computerChoice").html("rock");
+            if(userChoice="rock"){
+                $("#result").html("Draw!");
+            }
+            else if(userChoice="paper"){
+                $("#result").html("You win!");
+            }
+            else if(userChoice="scissors"){
+                $("#result").html("You lose!");
+            }
         }
+        
         else if(computerChoice > 1/3 && computerChoice < 2/3){
-            comChoice = ("scissors");
-            $("#computerChoice").html(comChoice);
-            console.log(comChoice);
+            $("#computerChoice").html("paper");
+            if(userChoice="rock"){
+                $("#result").html("You lose");
+            }
+            else if(userChoice="paper"){
+                $("#result").html("Draw!");
+            }
+            else if(userChoice="scissors"){
+                $("#result").html("You win!");
+            }
         }
+        
         else if(computerChoice > 2/3){
-            comChoice = ("rock");
-            $("#computerChoice").html(comChoice);
-            console.log(comChoice);
-        }
-        else if(userChoice == comChoice){
-            $("#result").html("Draw");
+        $("#computerChoice").html("scissors");
+        if(userChoice="rock"){
+                $("#result").html("You win");
+            }
+            else if(userChoice="paper"){
+                $("#result").html("You lose!");
+            }
+            else if(userChoice="scissors"){
+                $("#result").html("Draw!");
+            }
         }
     });
 
